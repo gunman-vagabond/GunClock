@@ -40,7 +40,6 @@ public class MainActivity extends Activity {
 	Handler handler; 
 	
 	Timer   mTimer   = null;
-//	Handler mHandler = new Handler();
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
