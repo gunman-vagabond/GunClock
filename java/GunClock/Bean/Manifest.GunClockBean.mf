@@ -1,0 +1,3 @@
+Name: gunman.GunClockBean.class
+Java-Bean: True
+Main-Class: gunman.GunClockBean
