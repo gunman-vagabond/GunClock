@@ -1,0 +1,4 @@
+LIBRARY GunClock
+EXPORTS
+  showGunClock
+  getGunClock
