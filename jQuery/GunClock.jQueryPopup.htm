@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>jQuery ガンマン</title>
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="GunClock.jQuery.js"></script>
+
+<meta http-equiv="Content-type"
+         content="text/html; charset=Shift_JIS">
+
+<script type="text/javascript">
+//https://www.tam-tam.co.jp/tipsnote/html_css/post8031.html
+//modal
+$(function(){
+
+    //テキストリンクをクリックしたら
+    $("#modal-open").click(function(){
+        //body内の最後に<div id="modal-bg"></div>を挿入
+        $("body").append('<div id="modal-bg"></div>');
+    
+        //画面中央を計算する関数を実行
+        modalResize();
+
+        //モーダルウィンドウを表示
+        $("#modal-bg,#modal-main").fadeIn("slow");
+    
+        //画面のどこかをクリックしたらモーダルを閉じる
+        $("#modal-bg,#modal-main").click(function(){
+            $("#modal-main,#modal-bg").fadeOut("slow",function(){
+                //挿入した<div id="modal-bg"></div>を削除
+                $('#modal-bg').remove() ;
+            });
+    
+        });
+    
+        //画面の左上からmodal-mainの横幅・高さを引き、その値を2で割ると画面中央の位置が計算できます
+        $(window).resize(modalResize);
+        function modalResize(){
+
+            var w = $(window).width();
+            var h = $(window).height();
+
+            var cw = $("#clockSize").val() * 16;
+            var ch = $("#clockSize").val() * 16 * 1.2;
+
+            $("#modal-main").css({
+                "left": "10px",
+                "top": "10px",
+                "font-size": "16px",
+                "width":  cw + "px",
+                "height": ch + "px",
+                "left": ((w - cw)/2) + "px",
+                "top": ((h - ch)/2) + "px",
+            });
+
+//            var cw = $("#modal-main").outerWidth();
+//            var ch = $("#modal-main").outerHeight();
+//            var fontsz = ch / $("#clockSize").val();
+//            //取得した値をcssに追加する
+//            $("#modal-main").css({
+//                "left": ((w - cw)/2) + "px",
+//                "top": ((h - ch)/2) + "px",
+//                "font-size": fontsz + "px"
+//            });
+        }
+    });
+});
+</script>
+<style type="text/css">
+<!--
+#modal-open {
+  color: #cc0000;
+  text-decoration:underline;
+}
+/* モーダル コンテンツエリア */
+#modal-main {
+  display: none;
+  width: 500px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #666666;
+  position:fixed;
+  z-index: 2;
+}
+/* モーダル 背景エリア */
+#modal-bg {
+  display:none;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#000000"  text="#ffffff" link="#ff7d00" vlink="#ff0000" alink="#82c900">
+<center>
+<hr width=80%>
+<h1><font color="#ffff00">jQuery ガンマン</font></h1>
+<hr width=80%>
+<p>
+jQuery版ガンマンです。<p>
+<hr width=80%>
+
+<p>
+
+
+
+<div id="modal-main">
+GunClock
+<pre id="GunClock"></pre>
+</div>
+
+
+<p>
+
+<form>
+clockSize : 
+<input type="text" size="2" id="clockSize" name="clockSize" value="25">
+</form>
+<p><a id="modal-open" class="button-link">モーダルウィンドウでGunClockを開きます。</a></p>
+
+<hr width=80%>
+
+[ <a href="../index.html">ガンマンのページへ戻る</a> ]
+
+</center>
+</body>
+</html>
