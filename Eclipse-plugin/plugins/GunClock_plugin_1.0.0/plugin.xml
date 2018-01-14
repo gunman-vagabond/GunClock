@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="GunClock_plugin"
+   name="GunClock_plugin Plug-in"
+   version="1.0.0"
+   provider-name="Gunman soft"
+   class="gunClock_plugin.GunClock_pluginPlugin">
+
+   <runtime>
+      <library name="GunClock_plugin.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+   </requires>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="GunClock Category"
+            id="GunClock_plugin">
+      </category>
+      <view
+            name="GunClock View"
+            icon="icons/sample.gif"
+            category="GunClock_plugin"
+            class="gunClock_plugin.views.GunClockView"
+            id="gunClock_plugin.views.GunClockView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="gunClock_plugin.views.GunClockView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>
