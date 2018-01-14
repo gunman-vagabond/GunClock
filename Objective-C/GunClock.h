@@ -1,0 +1,15 @@
+//
+//  GunClock.h
+//  HelloWorld
+//
+//  Created by 柳葉 光 on 17/02/25.
+//  Copyright (c) 2017年 test. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface GunClock : NSObject
+
+- (NSString *)getGunClock : (int) gunClockSize;
+
+@end
