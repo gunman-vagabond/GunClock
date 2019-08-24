@@ -158,7 +158,7 @@ public class GunClockBean implements Serializable {
         // get time
         /////////////
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("JST"), Locale.JAPAN);
-        int hour   = calendar.get(Calendar.HOUR);
+        int hour   = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
         int second = calendar.get(Calendar.SECOND);
 
@@ -277,8 +277,8 @@ public class GunClockBean implements Serializable {
 
         double aveRadian = (hRadian + mRadian) / 2;
 
-        if ( ((hRadian >= mRadian) && (hRadian - mRadian < Math.PI))
-          || ((mRadian >= hRadian) && (mRadian - hRadian < Math.PI))
+        if ( ((hRadian > mRadian) && (hRadian - mRadian < Math.PI))
+          || ((mRadian > hRadian) && (mRadian - hRadian < Math.PI))
         ) {
             return aveRadian + Math.PI; 
         } else {
