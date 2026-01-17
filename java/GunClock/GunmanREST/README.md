@@ -66,12 +66,25 @@
 - /GunmanREST/rest/gunclock/json/<時計のサイズ>
   - ex.) http://xxx.xxx:8080/GunmanREST/rest/gunclock/json/20
 
+```
+
+{"message":"                       12                         ,                                                  ,            +                       +             ,                                                  ,                                                  ,                      _________                   ,    +                 | 03:45 |             +     ,                      ~~~~~~~~~                   ,                                                  ,                                                  ,  __AA                                            ,  | 6 |__P                                        ,9 ~~|    l#############::::::                   3 ,   /_/~l_l                 ::::::     __          ,                               :::: _|__|_        ,                                   b (@@)         ,                                    V|~~|>        ,    +                                //T|   +     ,                                                  ,                                                  ,                                                  ,                                                  ,            +                       +             ,                                                  ,                        6                         "}
+```
+
 ## type=json(2)
 
 - /GunmanREST/rest/gunclock/json2/<時計のサイズ>
   - ex.) http://xxx.xxx:8080/GunmanREST/rest/gunclock/json2/20
 
+```
+["                       12                         ","                                                  ","            +                       +             ","                                                  ","                                                  ","                                                  ","    +                 _________             +     ","                      | 03:47 |                   ","  __AA                ~~~~~~~~~                   ","  | 6 |__P                                        ","  ~~|    l                                        ","   /_/~l_l#######                                 ","9                ######::::::                   3 ","                           ::::::     __          ","                               :::: _|__|_        ","                                   b (@@)         ","                                    V|~~|>        ","    +                                //T|   +     ","                                                  ","                                                  ","                                                  ","                                                  ","            +                       +             ","                                                  ","                        6                         "]
+```
+
 ## type=jsonp
 
 - /GunmanREST/rest/gunclock/jsonp/<時計のサイズ>
   - ex.) http://xxx.xxx:8080/GunmanREST/rest/gunclock/jsonp/20
+
+```
+callback({"message":"                       12                         ,                                                  ,            +                       +             ,                                                  ,                                                  ,                                                  ,    +                   _________           +     ,                        | 03:47 |                 ,  __AA                  ~~~~~~~~~                 ,  | 6 |__P                                        ,  ~~|    l                                        ,   /_/~l_l#######                                 ,9                ######::::::                   3 ,                           ::::::     __          ,                               :::: _|__|_        ,                                   b (@@)         ,                                    V|~~|>        ,    +                                //T|   +     ,                                                  ,                                                  ,                                                  ,                                                  ,            +                       +             ,                                                  ,                        6                         "})
+```
