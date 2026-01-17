@@ -1,10 +1,12 @@
-# ŠT—v
-- JAX-RS (Jersey) ‚ÅRESTƒCƒ“ƒ^ƒtƒF[ƒX‚ğÀŒ»‚µ‚Ü‚µ‚½B
-- type=html/text/json(2í—Ş)/jsonp ‚Ìƒpƒ^[ƒ“‚ğ‚µ‚Ü‚µ‚½B
+# æ¦‚è¦
+- JAX-RS (Jersey) ã§RESTã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã‚’å®Ÿç¾ã—ã¾ã—ãŸã€‚
+- type=html/text/json(2ç¨®é¡)/jsonp ã®ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’è©¦ã—ã¾ã—ãŸã€‚
 
 # usage
 
-##type=html
-- /GunmanREST/rest/gunclock/html/<Œv‚ÌƒTƒCƒY>
+##ã€€type=html
+- /GunmanREST/rest/gunclock/html/<æ™‚è¨ˆã®ã‚µã‚¤ã‚º>
+
 -- ex.) http://xxx.xxx:8080/GunmanREST/rest/gunclock/html/20
+
 
