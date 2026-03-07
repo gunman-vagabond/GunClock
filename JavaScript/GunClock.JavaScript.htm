@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>JavaScript ガンマン</title>
+
+<meta http-equiv="Content-type"
+         content="text/html; charset=Shift_JIS">
+</head>
+
+<body bgcolor="#000000"  text="#ffffff" link="#ff7d00" vlink="#ff0000" alink="#82c900">
+<center>
+<hr width=80%>
+<h1><font color="#ffff00">JavaScript ガンマン</font></h1>
+<hr width=80%>
+<p>
+JavaScript版ガンマンです。<p>
+<hr width=80%>
+
+<p>
+
+<pre id="GunClock"></pre>
+
+<p>
+
+<form onsubmit="return false;">
+clockSize : 
+<input type="text" size="2" id="clockSize" name="clockSize" value="30">
+</form>
+
+<hr width=80%>
+
+[ <a href="../index.html">ガンマンのページへ戻る</a> ]
+
+</center>
+
+
+<script type="text/javascript" src="GunClock.js"></script>
+<script type="text/javascript">
+function timer01() {
+  clockSize = parseInt(document.getElementById('clockSize').value)
+
+  if ( clockSize < 17 )
+    gun.innerText = "size too small"
+  else
+    gun.innerText = GunClock(clockSize)
+}
+
+gun = document.getElementById('GunClock')
+timer01()
+setInterval(timer01,1000);
+</script>
+
+<!--
+<script type="text/javascript">
+var gunclock2 = document.getElementById('GunClock');
+gunclock2.innerHTML = "aaa";
+</script>
+-->
+
+</body>
+</html>
